@@ -1,0 +1,48 @@
+
+.main-body {
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #ececec;
+	
+}
+
+.MuiTableHead-root {
+    border: solid #b5b2b2;
+}
+
+.MuiTableContainer-root {
+	padding-bottom: 3rem;
+}
+
+.MuiTableBody-root {
+    border: solid #b5b2b2;
+}
+
+.main-body .elm-center {
+	height: 2rem;
+	width: 17rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 2rem;
+}
+
+button[class*='btn-'] {
+	cursor: pointer;
+}
+
+.font-bold{
+	font-weight: bold;
+}
+
+.main-body .algo-name-lbl {
+	/* width: 25rem; */
+	margin-bottom: 2.5rem;
+}
+
+.MuiBackdrop-root.backdrop {
+    z-index: 1;
+}
