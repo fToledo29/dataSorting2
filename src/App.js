@@ -1,4 +1,4 @@
-import React, { useEffect, useStateuseCallback, } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
@@ -47,7 +47,7 @@ function App() {
 		changeData({...data, ...dataCopy});
 	}
 
-	const getMoreData = () => {
+	const getMoreData = useCallback(() => {
 		let newData = [];
 		setOpen(true);
 		updateStateProperty([], '');
@@ -69,7 +69,7 @@ function App() {
 			console.log('Something bad has happened :( ', error);
 		});
 
-	};
+	}, []);
 	
 	const sortData = () => {
 		setOpen(true);
@@ -86,7 +86,7 @@ function App() {
 
 	useEffect(() => {
 		getMoreData();
-	}, [getMoreData]);
+	}, []);
 
 	const onSelectChanges = (e) => {
 		if (algoName !== SELECT_KEY && dataSorted) {

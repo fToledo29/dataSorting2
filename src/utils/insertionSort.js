@@ -16,7 +16,7 @@ export default class InsertionSort extends SelectionSort {
 			*  Validating if current item is smaller than the 
 			*  item one index before.
 			*/
-			while (j > 0 && arr[j - 1][property].localeCompare(currentItem[property]) < 0) {
+			while (j > 0 && currentItem[property].localeCompare(arr[j - 1][property]) < 0) {
 				
 				/**
 				 * If current item is smaler we move the item before (j - 1) 

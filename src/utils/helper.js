@@ -1,4 +1,4 @@
-import { ALGORITHM_NAMES, ALGORITHM_NAMES_ARR } from '../shared/constants';
+import { ALGORITHM_NAMES } from '../shared/constants';
 import BubbleSort from './bubbleSort';
 
 export default class Helper extends BubbleSort {
