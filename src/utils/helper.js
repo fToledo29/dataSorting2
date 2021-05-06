@@ -19,14 +19,14 @@ export default class Helper extends BubbleSort {
 					data: Helper.selectionSort(data, property),
 					algorithm: algoName
 				};
+			case ALGORITHM_NAMES.INSERTION_SORT:
+				return {
+					data: Helper.insertionSort(data, property, 1),
+					algorithm: algoName
+				};
 			// case ALGORITHM_NAMES.BUBBLE_SORT:
 			// 	return {
 			// 		data: Helper.bubbleSort(data, property),
-			// 		algorithm: algoName
-			// 	};
-			// case ALGORITHM_NAMES.INSERTION_SORT:
-			// 	return {
-			// 		data: Helper.insertionSort(data, property, 1),
 			// 		algorithm: algoName
 			// 	};
 			default:

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useStateuseCallback, } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import Select from '@material-ui/core/Select';
@@ -8,7 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import API from './api/apiRequest';
 import Helper from './utils/helper';
 import './App.css';
-import { ALGORITHM_NAMES, ALGORITHM_NAMES_ARR } from './shared/constants';
+import { ALGORITHM_NAMES_ARR } from './shared/constants';
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -27,7 +27,6 @@ function App() {
 	let [algoName, changeAlgo] = useState(SELECT_KEY);
 	let [upToDateDataStatus, changeUpToDateDataStatus] = useState(false);
 	let [open, setOpen] = React.useState(false);
-	let [selectStatus, changeSelectStatus] = useState(false);
 	let [dataSorted, changeDataSortedStatus] = useState(false);
 	let [sortDuration, sortDurationStatus] = useState(0);
 
@@ -87,7 +86,7 @@ function App() {
 
 	useEffect(() => {
 		getMoreData();
-	}, []);
+	}, [getMoreData]);
 
 	const onSelectChanges = (e) => {
 		if (algoName !== SELECT_KEY && dataSorted) {
